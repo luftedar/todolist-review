@@ -5,11 +5,11 @@ import { noneChecked, overlineChecked } from './renderlist.js';
 export let checkedArray = [];
 
 const statusArray = taskList.map((x) => x.complete);
-for (let i = 0; i < statusArray.length; i += 1) {
+statusArray.forEach((i) => {
   if (statusArray[i] === true) {
     checkedArray.push(i.toString());
   }
-}
+})
 
 export function updateCheckBox(htmlElement, array, index, pElement) {
   if (htmlElement.checked) {
